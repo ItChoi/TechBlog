@@ -9,3 +9,5 @@ o
 ?BookStudy/Database/Real Mysql 8.0/05. 트랜잭션과 잠금.md,f/5/f53aa7c238c8134ae538fa1e9e070b8dbe882f69
 H
 Resources/image/image.md,9/f/9f020ede2aca6cfd3f78025457628432fff72fa1
+t
+DBookStudy/Database/Real Mysql 8.0/11. 쿼리 작성 및 최적화.md,a/0/a0cd25dcdb3ba21109786c43ce90d7949ad410c2
