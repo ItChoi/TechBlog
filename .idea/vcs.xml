@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BookStudy/도커/도커 교과서/080258" vcs="Git" />
   </component>
 </project>
