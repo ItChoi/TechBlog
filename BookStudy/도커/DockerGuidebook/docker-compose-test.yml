@@ -1,0 +1,35 @@
+version: '3.7'
+
+services:
+  todo-web:
+    ports:
+      - "8080:80"
+    environment:
+      - Database:Provider=Postgres
+    networks:
+      - app-net
+  todo-db:
+    image: diamol/postgres:11.5
+    environment:
+      - PGDATA:/data
+    ports:
+      - "5432:5432"
+    volumes:
+      - todo-v:/var/lib/mysql
+    networks:
+      - app-net
+
+secrets:
+  todo-db-connection:
+    file: ./config/db-post-connection.json
+
+volumes:
+  todo-v:
+    external:
+      name: test-v
+
+networks:
+  app-net:
+    external:
+      name: nat
+
