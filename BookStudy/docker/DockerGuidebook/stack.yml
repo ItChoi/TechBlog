@@ -1,33 +1,33 @@
-version: "3.7"
-
+networks:
+  app-net:
+    external: true
+    name: ingress
 services:
   accesslog:
     image: diamol/ch04-access-log
     networks:
       - app-net
-  image-of-the-day:
-    image: diamol/ch04-image-of-the-day
-    networks:
-      - app-net
-    ports:
-      - 8010:80
-    deploy:
-      replicas: 4
-      resources:
-        limits:
-          cpus: "0.50"
-          memory: 100M
-      update_config:
-        failure_action: rollback
-        order: start-first
-        parallelism: 2
-        monitor: 60s
   image-gallery:
     image: diamol/ch04-image-gallery
     networks:
       - app-net
+  image-of-the-day:
+    deploy:
+      replicas: 4
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 100M
+      update_config:
+        failure_action: rollback
+        monitor: 60s
+        order: start-first
+        parallelism: 2
+    image: diamol/ch04-image-of-the-day
+    networks:
+      - app-net
+    ports:
+    - published: 8010
+      target: 80
+version: '3.7'
 
-networks:
-  app-net:
-    external:
-      name: ingress
