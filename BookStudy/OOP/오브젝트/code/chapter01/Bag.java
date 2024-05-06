@@ -1,3 +1,5 @@
+package chapter01;
+
 public class Bag {
     private Long amount; // 현금
     private Invitation invitation; // 초대장

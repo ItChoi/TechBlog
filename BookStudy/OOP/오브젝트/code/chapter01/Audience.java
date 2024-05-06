@@ -1,3 +1,5 @@
+package chapter01;
+
 public class Audience {
     private Bag bag;
 
