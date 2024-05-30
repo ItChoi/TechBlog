@@ -11,6 +11,10 @@ public class Money {
         return new Money(BigDecimal.valueOf(amount));
     }
 
+    public static Money wons(double amount) {
+        return new Money(BigDecimal.valueOf(amount));
+    }
+
     Money(BigDecimal amount) {
         this.amount = amount;
     }
