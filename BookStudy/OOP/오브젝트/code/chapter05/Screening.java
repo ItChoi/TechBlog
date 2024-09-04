@@ -3,7 +3,7 @@ package chapter05;
 import java.time.LocalDateTime;
 
 public class Screening {
-    private MovieTemp movie;
+    private Movie movie;
     private int sequence;
     private LocalDateTime whenScreened;
 
@@ -18,7 +18,7 @@ public class Screening {
         return this.movie.calculateMovieFee(this).times(audienceCount);
     }
 
-    public MovieTemp getMovie() {
+    public Movie getMovie() {
         return movie;
     }
 
@@ -29,4 +29,6 @@ public class Screening {
     public LocalDateTime getWhenScreened() {
         return whenScreened;
     }
+
+
 }

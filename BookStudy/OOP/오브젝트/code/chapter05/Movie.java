@@ -38,4 +38,20 @@ public abstract class Movie {
     protected Money getFee() {
         return fee;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Duration getRunningTime() {
+        return runningTime;
+    }
+
+    public List<DiscountCondition> getDiscountConditions() {
+        return discountConditions;
+    }
+
+    public double getDiscountPercent() {
+        return 0;
+    }
 }

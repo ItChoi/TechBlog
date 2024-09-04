@@ -50,4 +50,13 @@ public class MovieTemp {
         return this.discountConditions.stream()
                 .anyMatch(condition -> condition.isSatisfiedBy(screening));
     }
+
+
+    public List<DiscountConditionTemp> getDiscountConditions() {
+        return discountConditions;
+    }
+
+    public Money getFee() {
+        return null;
+    }
 }

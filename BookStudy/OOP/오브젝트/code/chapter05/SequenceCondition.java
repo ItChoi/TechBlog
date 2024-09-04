@@ -10,4 +10,8 @@ public class SequenceCondition implements DiscountCondition {
     public boolean isSatisfiedBy(Screening screening) {
         return sequence == screening.getSequence();
     }
+
+    public int getSequence() {
+        return sequence;
+    }
 }
