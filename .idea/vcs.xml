@@ -2,7 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BookStudy/docker/DockerGuidebook/080258" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/BookStudy/k8s/k8sGuidebook/kiamol" vcs="Git" />
   </component>
 </project>
