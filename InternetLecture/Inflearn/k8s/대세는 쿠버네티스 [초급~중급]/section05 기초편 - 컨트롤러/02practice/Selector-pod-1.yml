@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-node-affinity1
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIngnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - {key: AZ-01, operator: Exists}
+  containers:
+    - name: container
+      image: kubetm/init
