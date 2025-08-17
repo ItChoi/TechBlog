@@ -22,4 +22,27 @@
 
 # 19. stomp jwt인증 처리
 - 인증 여부랑 상관 없이 채팅 메시지를 받는다. -> 토큰 검증 필요
-- 
+
+# 22. stomp 마무리
+- StompWebSocketConfig implements WebSocketMessageBrokerConfigurer
+  - endpoint 설정
+  - 메시지 발행, 구독 url 패턴 정의 (prefix)
+    - 브로커 역할 -> 메시지 발행, 구독
+      - /publish
+      - /topic
+    - 외뷰 Queue 연동 가능
+- ChannelInterceptor implements StompHandler
+  - 클라이언트 -> 서버 전송 메시지 인터셉트
+    - connect
+    - subscribe
+    - send
+    - disconnect
+- StompController
+  - MessageMapping, SendTo -> 메시지 라우팅
+  - MessageMapping, SimpleMessageSendingOperations.convertAndSend -> 메시지 라우팅 
+- EventListener
+  - connect, disconnect 체크
+  - 연결/해제 이벤트 기록, 세션 수 실시간 조회
+- 채팅 코드 테스트
+  - WebSocket -> 포스트맨으로 테스트 가능
+  - Stomp -> 포스트맨에서 지원하지 않음, FE 구성을 통한 테스트
