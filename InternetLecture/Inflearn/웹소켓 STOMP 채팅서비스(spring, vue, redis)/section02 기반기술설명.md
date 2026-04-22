@@ -83,7 +83,7 @@
 - stomp를 이해 하지 못하고 채팅 서비스 개발하는 사람이 많다.
   - 어렵진 않다!
 - websocket, stomp 차이
-- stomp (Simple Text Oriented Messaging Protocal)
+- stomp (Simple Text Oriented Messaging Protocol)
   - websocket에서 더 발전된 형태
   - 웹 소켓 위에서 동작하는 메시징 프로토콜
 - 일반적인 웹 소켓
